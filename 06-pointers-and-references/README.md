@@ -19,3 +19,30 @@ C++: int value=42; int* p=&value; std::cout << *p;
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C — pointer parameter**
+```c
+#include <stdio.h>
+void increment(int *value) {
+    if (value != NULL) ++(*value);
+}
+int main(void) {
+    int count = 9;
+    increment(&count);
+    printf("%d\\n", count); // 10
+    return 0;
+}
+```
+
+**C++ — reference parameter**
+```cpp
+#include <iostream>
+void increment(int& value) { ++value; }
+int main() {
+    int count = 9;
+    increment(count);
+    std::cout << count << '\\n';
+}
+```
