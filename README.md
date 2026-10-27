@@ -61,7 +61,7 @@ Create `main.c`:
 ```c
 #include <stdio.h>
 int main(void) {
-    printf("Hello, C!\\n");
+    printf("Hello, C!\n");
     return 0;
 }
 ```
@@ -69,7 +69,7 @@ Create `main.cpp`:
 ```cpp
 #include <iostream>
 int main() {
-    std::cout << "Hello, C++!\\n";
+    std::cout << "Hello, C++!\n";
 }
 ```
 Compile and run both. If both work, your environment is ready.
