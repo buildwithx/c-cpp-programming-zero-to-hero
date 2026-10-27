@@ -21,3 +21,29 @@ Beginner: profile printer, unit converter, number guessing game. Intermediate: c
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C++ — small expense summary**
+```cpp
+#include <iomanip>
+#include <iostream>
+#include <vector>
+int main() {
+    std::vector<double> expenses;
+    std::cout << "Enter 3 expenses:\\n";
+    for (int i = 0; i < 3; ++i) {
+        double amount{};
+        if (!(std::cin >> amount) || amount < 0) {
+            std::cerr << "Enter non-negative numbers.\\n";
+            return 1;
+        }
+        expenses.push_back(amount);
+    }
+    double total = 0;
+    for (double amount : expenses) total += amount;
+    std::cout << std::fixed << std::setprecision(2)
+              << "Total: " << total << '\\n';
+}
+```
+Extend it with file persistence, categories, and tests.
