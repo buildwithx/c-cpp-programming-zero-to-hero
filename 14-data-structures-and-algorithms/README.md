@@ -33,7 +33,7 @@ int find_index(const int values[], int length, int target) {
 }
 int main(void) {
     int values[] = {4, 7, 2, 9};
-    printf("Index: %d\\n", find_index(values, 4, 2));
+    printf("Index: %d\n", find_index(values, 4, 2));
     return 0;
 }
 ```
@@ -47,6 +47,6 @@ int main() {
     std::vector<int> values{4, 7, 2, 9};
     std::sort(values.begin(), values.end());
     std::cout << std::boolalpha
-              << std::binary_search(values.begin(), values.end(), 7) << '\\n';
+              << std::binary_search(values.begin(), values.end(), 7) << '\n';
 }
 ```
