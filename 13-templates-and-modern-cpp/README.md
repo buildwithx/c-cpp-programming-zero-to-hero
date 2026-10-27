@@ -20,3 +20,21 @@ C++: template<class T> T larger(T a,T b){ return a < b ? b : a; }
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C++ — function template and lambda**
+```cpp
+#include <algorithm>
+#include <iostream>
+#include <vector>
+template <typename T>
+T larger(T a, T b) { return a < b ? b : a; }
+int main() {
+    std::vector<int> values{5, 1, 8, 3};
+    std::sort(values.begin(), values.end(),
+              [](int a, int b) { return a > b; });
+    std::cout << "Larger: " << larger(10, 42) << '\\n';
+    for (int value : values) std::cout << value << ' ';
+}
+```
