@@ -20,3 +20,27 @@ Next topics: C undefined behavior and function pointers; C++ move semantics, con
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C++ — synchronized shared state**
+```cpp
+#include <iostream>
+#include <mutex>
+#include <thread>
+int main() {
+    int total = 0;
+    std::mutex mutex;
+    auto work = [&]() {
+        for (int i = 0; i < 1000; ++i) {
+            std::lock_guard<std::mutex> lock(mutex);
+            ++total;
+        }
+    };
+    std::thread first(work), second(work);
+    first.join();
+    second.join();
+    std::cout << total << '\\n'; // 2000
+}
+```
+Compile where pthread flags are required: `g++ -std=c++17 -pthread main.cpp -o main`. This introduces synchronization; study data races and lock scope before building larger concurrent programs.
