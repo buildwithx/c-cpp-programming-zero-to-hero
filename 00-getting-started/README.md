@@ -28,7 +28,7 @@ Create hello.c with printf and hello.cpp with std::cout. Compile with gcc -std=c
 ```c
 #include <stdio.h>
 int main(void) {
-    printf("Hello from C!\\n");
+    printf("Hello from C!\n");
     return 0;
 }
 ```
@@ -38,7 +38,7 @@ Compile: `gcc -std=c17 -Wall -Wextra -Wpedantic hello.c -o hello`
 ```cpp
 #include <iostream>
 int main() {
-    std::cout << "Hello from C++!\\n";
+    std::cout << "Hello from C++!\n";
 }
 ```
 Compile: `g++ -std=c++17 -Wall -Wextra -Wpedantic hello.cpp -o hello`
