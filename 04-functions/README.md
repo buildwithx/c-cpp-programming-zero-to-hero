@@ -20,3 +20,26 @@ C++: int square(int value) { return value * value; }
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C — reusable function**
+```c
+#include <stdio.h>
+int maximum(int a, int b) { return a > b ? a : b; }
+int main(void) {
+    printf("Maximum: %d\\n", maximum(12, 7));
+    return 0;
+}
+```
+
+**C++ — reference parameter**
+```cpp
+#include <iostream>
+void double_value(int& value) { value *= 2; }
+int main() {
+    int score = 21;
+    double_value(score);
+    std::cout << score << '\\n'; // 42
+}
+```
