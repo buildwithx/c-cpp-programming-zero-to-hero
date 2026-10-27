@@ -34,7 +34,7 @@ int main() {
     std::vector<int> values{5, 1, 8, 3};
     std::sort(values.begin(), values.end(),
               [](int a, int b) { return a > b; });
-    std::cout << "Larger: " << larger(10, 42) << '\\n';
+    std::cout << "Larger: " << larger(10, 42) << '\n';
     for (int value : values) std::cout << value << ' ';
 }
 ```
