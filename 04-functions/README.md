@@ -28,7 +28,7 @@ C++: int square(int value) { return value * value; }
 #include <stdio.h>
 int maximum(int a, int b) { return a > b ? a : b; }
 int main(void) {
-    printf("Maximum: %d\\n", maximum(12, 7));
+    printf("Maximum: %d\n", maximum(12, 7));
     return 0;
 }
 ```
@@ -40,6 +40,6 @@ void double_value(int& value) { value *= 2; }
 int main() {
     int score = 21;
     double_value(score);
-    std::cout << score << '\\n'; // 42
+    std::cout << score << '\n'; // 42
 }
 ```
