@@ -31,7 +31,7 @@ int main(void) {
     size_t length = sizeof values / sizeof values[0];
     int sum = 0;
     for (size_t i = 0; i < length; ++i) sum += values[i];
-    printf("Count=%zu, sum=%d\\n", length, sum);
+    printf("Count=%zu, sum=%d\n", length, sum);
     return 0;
 }
 ```
@@ -45,6 +45,6 @@ int main() {
     int vowels = 0;
     for (char ch : word)
         if (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') ++vowels;
-    std::cout << vowels << " vowels\\n";
+    std::cout << vowels << " vowels\n";
 }
 ```
