@@ -29,7 +29,7 @@ C++: std::ifstream in("notes.txt"); if (!in) { std::cerr << "Cannot open file"; 
 int main(void) {
     FILE *file = fopen("message.txt", "w");
     if (file == NULL) { perror("message.txt"); return 1; }
-    if (fprintf(file, "Learning C file I/O\\n") < 0) {
+    if (fprintf(file, "Learning C file I/O\n") < 0) {
         perror("write"); fclose(file); return 1;
     }
     if (fclose(file) != 0) { perror("close"); return 1; }
@@ -44,8 +44,8 @@ int main(void) {
 #include <string>
 int main() {
     std::ifstream input("message.txt");
-    if (!input) { std::cerr << "Cannot open file\\n"; return 1; }
+    if (!input) { std::cerr << "Cannot open file\n"; return 1; }
     std::string line;
-    while (std::getline(input, line)) std::cout << line << '\\n';
+    while (std::getline(input, line)) std::cout << line << '\n';
 }
 ```
