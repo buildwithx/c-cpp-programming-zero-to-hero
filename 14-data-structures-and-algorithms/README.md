@@ -20,3 +20,33 @@ Implement binary search using low/high bounds and a midpoint calculated as low +
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C — linear search**
+```c
+#include <stdio.h>
+int find_index(const int values[], int length, int target) {
+    for (int i = 0; i < length; ++i)
+        if (values[i] == target) return i;
+    return -1;
+}
+int main(void) {
+    int values[] = {4, 7, 2, 9};
+    printf("Index: %d\\n", find_index(values, 4, 2));
+    return 0;
+}
+```
+
+**C++ — sort then binary search**
+```cpp
+#include <algorithm>
+#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> values{4, 7, 2, 9};
+    std::sort(values.begin(), values.end());
+    std::cout << std::boolalpha
+              << std::binary_search(values.begin(), values.end(), 7) << '\\n';
+}
+```
