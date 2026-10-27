@@ -34,6 +34,6 @@ int main() {
     auto passing = std::count_if(scores.begin(), scores.end(),
                                  [](int score) { return score >= 70; });
     for (int score : scores) std::cout << score << ' ';
-    std::cout << "\\nPassing: " << passing << '\\n';
+    std::cout << "\nPassing: " << passing << '\n';
 }
 ```
