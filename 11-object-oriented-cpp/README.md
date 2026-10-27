@@ -42,7 +42,7 @@ private:
 int main() {
     BankAccount account{100};
     account.deposit(25);
-    std::cout << account.balance() << '\\n'; // 125
+    std::cout << account.balance() << '\n'; // 125
 }
 ```
 This topic is C++-specific: C does not have classes or member functions.
