@@ -43,7 +43,7 @@ int add(int a, int b) { return a + b; }
 ```c
 #include <stdio.h>
 #include "math_utils.h"
-int main(void) { printf("%d\\n", add(2, 3)); return 0; }
+int main(void) { printf("%d\n", add(2, 3)); return 0; }
 ```
 Compile: `gcc -std=c17 main.c math_utils.c -o app`.
 
