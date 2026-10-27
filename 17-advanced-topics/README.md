@@ -40,7 +40,7 @@ int main() {
     std::thread first(work), second(work);
     first.join();
     second.join();
-    std::cout << total << '\\n'; // 2000
+    std::cout << total << '\n'; // 2000
 }
 ```
 Compile where pthread flags are required: `g++ -std=c++17 -pthread main.cpp -o main`. This introduces synchronization; study data races and lock scope before building larger concurrent programs.
