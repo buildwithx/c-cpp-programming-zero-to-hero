@@ -31,7 +31,7 @@ void increment(int *value) {
 int main(void) {
     int count = 9;
     increment(&count);
-    printf("%d\\n", count); // 10
+    printf("%d\n", count); // 10
     return 0;
 }
 ```
@@ -43,6 +43,6 @@ void increment(int& value) { ++value; }
 int main() {
     int count = 9;
     increment(count);
-    std::cout << count << '\\n';
+    std::cout << count << '\n';
 }
 ```
