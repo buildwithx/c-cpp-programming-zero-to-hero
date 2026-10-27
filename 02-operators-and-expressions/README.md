@@ -28,8 +28,8 @@ C++: int a=7,b=2; std::cout << a/b << ' ' << static_cast<double>(a)/b;
 #include <stdio.h>
 int main(void) {
     int a = 17, b = 5;
-    printf("sum=%d, quotient=%d, remainder=%d\\n", a+b, a/b, a%b);
-    printf("floating quotient=%.2f\\n", (double)a/b);
+    printf("sum=%d, quotient=%d, remainder=%d\n", a+b, a/b, a%b);
+    printf("floating quotient=%.2f\n", (double)a/b);
     return 0;
 }
 ```
@@ -39,7 +39,7 @@ int main(void) {
 #include <iostream>
 int main() {
     int a = 17, b = 5;
-    std::cout << a / b << '\\n';
-    std::cout << static_cast<double>(a) / b << '\\n';
+    std::cout << a / b << '\n';
+    std::cout << static_cast<double>(a) / b << '\n';
 }
 ```
