@@ -32,7 +32,7 @@ int main(void) {
     int *values = malloc(count * sizeof *values);
     if (values == NULL) return 1;
     for (size_t i = 0; i < count; ++i) values[i] = (int)(i * 10);
-    printf("Last value: %d\\n", values[count - 1]);
+    printf("Last value: %d\n", values[count - 1]);
     free(values);
     return 0;
 }
@@ -44,6 +44,6 @@ int main(void) {
 #include <vector>
 int main() {
     std::vector<int> values{0, 10, 20, 30, 40};
-    std::cout << values.back() << '\\n';
+    std::cout << values.back() << '\n';
 } // vector releases its memory automatically
 ```
