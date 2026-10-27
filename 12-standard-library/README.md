@@ -20,3 +20,20 @@ C++: std::vector<int> v{7,2,9}; std::sort(v.begin(),v.end());
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C++ — vector, sort, and count_if**
+```cpp
+#include <algorithm>
+#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> scores{82, 65, 91, 74, 65};
+    std::sort(scores.begin(), scores.end());
+    auto passing = std::count_if(scores.begin(), scores.end(),
+                                 [](int score) { return score >= 70; });
+    for (int score : scores) std::cout << score << ' ';
+    std::cout << "\\nPassing: " << passing << '\\n';
+}
+```
