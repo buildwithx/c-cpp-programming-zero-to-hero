@@ -30,7 +30,7 @@ enum Status { PENDING, COMPLETE };
 struct Task { int id; enum Status status; };
 int main(void) {
     struct Task task = {1, PENDING};
-    printf("Task %d: %s\\n", task.id,
+    printf("Task %d: %s\n", task.id,
            task.status == COMPLETE ? "complete" : "pending");
     return 0;
 }
@@ -44,6 +44,6 @@ enum class Status { pending, complete };
 struct Task { int id; std::string title; Status status{Status::pending}; };
 int main() {
     Task task{1, "Study types"};
-    std::cout << task.id << ": " << task.title << '\\n';
+    std::cout << task.id << ": " << task.title << '\n';
 }
 ```
