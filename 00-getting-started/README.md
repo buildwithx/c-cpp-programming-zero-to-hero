@@ -21,3 +21,24 @@ Create hello.c with printf and hello.cpp with std::cout. Compile with gcc -std=c
 - [ ] I wrote and ran code related to this topic.
 - [ ] I tested boundary cases and corrected any compiler warnings.
 - [ ] I can explain one mistake I made and how I fixed it.
+
+## Code examples
+
+**C — `hello.c`**
+```c
+#include <stdio.h>
+int main(void) {
+    printf("Hello from C!\\n");
+    return 0;
+}
+```
+Compile: `gcc -std=c17 -Wall -Wextra -Wpedantic hello.c -o hello`
+
+**C++ — `hello.cpp`**
+```cpp
+#include <iostream>
+int main() {
+    std::cout << "Hello from C++!\\n";
+}
+```
+Compile: `g++ -std=c++17 -Wall -Wextra -Wpedantic hello.cpp -o hello`
